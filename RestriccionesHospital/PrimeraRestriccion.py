@@ -1,7 +1,7 @@
-from Restricciones import Restriccion
+from ..Restricciones import Restriccion
 from typing import List
-from Recursos import Recurso
-from Eventos import Evento
+from ..Recursos import Recurso
+from ..Eventos import Evento
 
 class RestriccionCorequisito(Restriccion):
     def __init__(self, recurso_principal: str, recursos_requeridos: List[str]):

@@ -1,8 +1,8 @@
-from Eventos import Evento
+from ..Eventos import Evento
 from datetime import datetime
 from typing import List
-from Recursos import Recurso
-from Enums import TipoEvento
+from ..Recursos import Recurso
+from ..Enums import TipoEvento
 from RecursosHospital.PersonalMedico import PersonalMedico
 
 class ConsultaMedica(Evento):

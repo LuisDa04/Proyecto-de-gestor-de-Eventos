@@ -1,8 +1,8 @@
-from Recursos import Recurso
+from ..Recursos import Recurso
 from typing import List
-from Enums import TipoRecurso
+from ..Enums import TipoRecurso
 from datetime import timedelta
-from Eventos import Evento
+from ..Eventos import Evento
 
 class PersonalMedico(Recurso):
     def __init__(self, id: str, nombre: str, especialidad: str, 

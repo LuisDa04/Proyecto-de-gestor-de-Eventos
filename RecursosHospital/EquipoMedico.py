@@ -1,6 +1,6 @@
-from Recursos import Recurso
-from Enums import TipoRecurso
-from Eventos import Evento
+from ..Recursos import Recurso
+from ..Enums import TipoRecurso
+from ..Eventos import Evento
 
 class EquipoMedico(Recurso):
     def __init__(self, id: str, nombre: str, requiere_operador: bool, 

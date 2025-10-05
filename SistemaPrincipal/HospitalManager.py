@@ -1,7 +1,7 @@
 from typing import List, Dict
-from Recursos import Recurso
-from Eventos import Evento
-from Restricciones import Restriccion
+from ..Recursos import Recurso
+from ..Eventos import Evento
+from ..Restricciones import Restriccion
 from datetime import datetime, timedelta, Optional
 import json
 from EventosHospital.Cirugia import Cirugia

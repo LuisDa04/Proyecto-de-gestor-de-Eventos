@@ -1,8 +1,8 @@
-from Enums import TipoEvento, TipoRecurso
-from Recursos import Recurso
+from ..Enums import TipoRecurso
+from ..Recursos import Recurso
 from typing import List
 from datetime import timedelta
-from Eventos import Evento
+from ..Eventos import Evento
 
 class Quirofano(Recurso):
     def __init__(self, id: str, nombre: str, equipamiento_especial: List[str]):
