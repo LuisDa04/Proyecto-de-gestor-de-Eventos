@@ -1,23 +1,23 @@
 from abc import ABC, abstractmethod
-from Enums import TipoEvento
-from Recursos import Recurso
-from typing import List
+from Enums import TipoEvento, TipoRecurso
+from typing import Dict
 from datetime import datetime
 
 class Evento(ABC):
     @abstractmethod
     def __init__(self, id: str, nombre: str, tipo: TipoEvento, 
-                 inicio: datetime, fin: datetime, recursos: List[Recurso]):
+                 inicio: datetime, fin: datetime, paciente: str):
         self.id = id
         self.nombre = nombre
         self.tipo = tipo
         self.inicio = inicio
         self.fin = fin
-        self.recursos = recursos
-        self.estado = "Pendiente"  # Pendiente, Confirmado, Cancelado
-        
+        self.paciente = paciente
+        self.prioridad = 0 if tipo == TipoEvento.URGENCIA else 1 
+        self.estado = "Pendiente"
+    
     @abstractmethod
-    def validar_factibilidad(self) -> bool:
+    def get_recursos_necesarios(self) -> Dict[TipoRecurso, int]:
         pass
     
     def to_dict(self) -> dict:
@@ -27,6 +27,8 @@ class Evento(ABC):
             'tipo': self.tipo.value,
             'inicio': self.inicio.isoformat(),
             'fin': self.fin.isoformat(),
-            'recursos': [r.id for r in self.recursos],
-            'estado': self.estado
+            'paciente': self.paciente,
+            'prioridad': self.prioridad,
+            'estado': self.estado,
+            'es_urgencia': self.prioridad == 0 
         }
