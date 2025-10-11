@@ -1,7 +1,7 @@
-from ..Restricciones import Restriccion
+from Modelos.Restricciones import Restriccion
 from typing import List
-from ..Recursos import Recurso
-from Eventos import Evento
+from Modelos.Recursos import Recurso
+from Modelos.Eventos import Evento
 
 class RestriccionCorequisito(Restriccion):
     def __init__(self, recurso_principal: str, recursos_requeridos: List[str]):
@@ -18,5 +18,5 @@ class RestriccionCorequisito(Restriccion):
                     return False
         return True
     
-    def get_descripcion(self) -> str:
+    def get_info(self) -> str:
         return f"Si se usa {self.recurso_principal}, también deben usarse: {', '.join(self.recursos_requeridos)}"

@@ -1,5 +1,5 @@
-from ..Enums import EstadoPaciente, TipoEvento
-from ..Eventos import Evento
+from Enums import EstadoPaciente, TipoEvento
+from Modelos.Eventos import Evento
 from datetime import datetime, timedelta
 
 class PacienteEnEspera:

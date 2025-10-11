@@ -2,7 +2,7 @@ from StockHospital.StockRecursos import StockManager
 from collections import deque
 from typing import Dict, Optional
 from EstadoPaciente import PacienteEnEspera
-from ..Enums import EstadoPaciente
+from Enums import EstadoPaciente
 
 class GestorSalaEspera:
     def __init__(self, stock_manager: StockManager):

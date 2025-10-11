@@ -1,4 +1,4 @@
-from ..Enums import TipoRecurso
+from Enums import TipoRecurso
 from typing import Dict
 
 class StockManager:
@@ -17,7 +17,7 @@ class StockManager:
             TipoRecurso.EXAMENES: 3,
             
             TipoRecurso.INSTRUMENTAL: float('inf'),
-            TipoRecurso.SALA_DE_ESPERA: 30
+            TipoRecurso.SALA_ESPERA: 30
         }
         
         self.stock_disponible = self.stock.copy()

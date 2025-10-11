@@ -14,7 +14,7 @@ class TipoRecurso(Enum):
     EXAMENES = "Sala de examenes" #necesaria para el examen medico
     
     INSTRUMENTAL = "Instrumental" #equipamiento basico necesario para tratar con cada paciente, infinito
-    SALA_DE_ESPERA = "Espacios en la sala de espera" #en orden de llegada
+    SALA_ESPERA = "Espacios en la sala de espera" #en orden de llegada
 
 class TipoEvento(Enum):
     CIRUGIA = "Cirugía"

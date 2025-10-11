@@ -8,5 +8,6 @@ class Restriccion(ABC):
     def validar(self, recursos: List[Recurso], evento: 'Evento') -> bool:
         pass
     
+    @abstractmethod
     def get_info(self) -> str:
         pass
